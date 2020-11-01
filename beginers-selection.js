@@ -54,6 +54,13 @@
 //   console.log(count)
 // }
 
+// function main(input) {
+//   input = input.split('\n')
+//   var N = Number(input[0])
+//   var nums = input[1].split8(' ')
+//   var cnt = 0
+//   for 
+// }
 
 //abc087b coins
 // const main = (input) => {
@@ -92,6 +99,19 @@
 
 //ABC088B - Card Game for Two
 const main = (input) => {
-  
+  input = input.split('\n')
+  const n = Number(input[0])
+  let a = input[1].split(' ').map(v => parseInt(v)).sort((a, b) => b - a)
+  let alice = 0
+  let bob = 0
+  while (a.length) {
+    alice = alice + a.shift()
+    bob = a.length ? bob + a.shift() : bob
+  }
+  console.log(alice - bob)
 }
-//main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+
+// main(`4
+//20 18 2 18`)
+
+main(require('fs').readFileSync('/dev/stdin', 'utf8'));
