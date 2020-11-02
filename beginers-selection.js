@@ -1,4 +1,4 @@
-//practiceA
+// practiceA
 // function main(input) {
 //   var input = input.split('\n')
 //   var temp = input[1].split(' ')
@@ -9,15 +9,14 @@
 //   console.log('%d %s', a+b+c, s)
 // }
 
-
-//abc086a
+// abc086a
 // function main(input) {
 //   const values = input.split(' ').map(v => parseInt(v, 10))
 //   const answer = values[0] * values[1] % 2 === 0 ? 'Even' : 'Odd'
 //   console.log(answer)
 // }
 
-//abc081a 回答1
+// abc081a 回答1
 // const main = (input) => {
 //   const values = input.split('')
 //   var count = 0
@@ -29,14 +28,13 @@
 //   console.log(count)
 // }
 
-//abc081a 回答2
+// abc081a 回答2
 // const main = (input) => {
 //   result = input.split('').filter(v => v === '1').length
 //   console.log(result)
 // }
 
-
-//abc081b shift only
+// abc081b shift only
 // const main = (input) => {
 //   var blocks = input.split('\n')
 //   var a = parseInt(blocks[0])
@@ -59,10 +57,10 @@
 //   var N = Number(input[0])
 //   var nums = input[1].split8(' ')
 //   var cnt = 0
-//   for 
+//   for
 // }
 
-//abc087b coins
+// abc087b coins
 // const main = (input) => {
 //   var values = input.split('\n').map(v => parseInt(v))
 //   var count = 0
@@ -77,10 +75,9 @@
 //   }
 //   console.log(count)
 // }
-//main('5\n1\n0\n150')
+// main('5\n1\n0\n150')
 
-
-//abc083b some sums
+// abc083b some sums
 // const main = (input) => {
 //   input = input.split(' ').map(v => parseInt(v))
 //   var count = 0
@@ -96,22 +93,25 @@
 // }
 // main('10 1 2')
 
-
-//ABC088B - Card Game for Two
+// ABC088B - Card Game for Two
 const main = (input) => {
-  input = input.split('\n')
-  const n = Number(input[0])
-  let a = input[1].split(' ').map(v => parseInt(v)).sort((a, b) => b - a)
-  let alice = 0
-  let bob = 0
+  input = input.split("\n");
+  const n = Number(input[0]);
+  let a = input[1]
+    .split(" ")
+    .map((v) => parseInt(v))
+    .sort((a, b) => b - a);
+  let alice = 0;
+  let bob = 0;
   while (a.length) {
-    alice = alice + a.shift()
-    bob = a.length ? bob + a.shift() : bob
+    alice = alice + a.shift();
+
+    bob = a.length ? bob + a.shift() : bob;
   }
-  console.log(alice - bob)
-}
+  console.log(alice - bob);
+};
 
 // main(`4
-//20 18 2 18`)
+// 20 18 2 18`);
 
-main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+main(require("fs").readFileSync("/dev/stdin", "utf8"));
