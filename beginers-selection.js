@@ -94,24 +94,72 @@
 // main('10 1 2')
 
 // ABC088B - Card Game for Two
-const main = (input) => {
-  input = input.split("\n");
-  const n = Number(input[0]);
-  let a = input[1]
-    .split(" ")
-    .map((v) => parseInt(v))
-    .sort((a, b) => b - a);
-  let alice = 0;
-  let bob = 0;
-  while (a.length) {
-    alice = alice + a.shift();
+// const main = (input) => {
+//   input = input.split("\n");
+//   const n = Number(input[0]);
+//   let a = input[1]
+//     .split(" ")
+//     .map((v) => parseInt(v))
+//     .sort((a, b) => b - a);
+//   let alice = 0;
+//   let bob = 0;
+//   while (a.length) {
+//     alice = alice + a.shift();
 
-    bob = a.length ? bob + a.shift() : bob;
-  }
-  console.log(alice - bob);
-};
+//     bob = a.length ? bob + a.shift() : bob;
+//   }
+//   console.log(alice - bob);
+// };
 
 // main(`4
 // 20 18 2 18`);
 
-main(require("fs").readFileSync("/dev/stdin", "utf8"));
+
+//Youtube
+'use strict';
+// function hello() {
+//   function child() {
+//     console.log('私はHelloの子供です')
+//   }
+//   return child
+// }
+
+// function recieve(v) {
+//   console.log('引数で受け取ったVを実行するよ');
+//   v();
+// }
+
+
+// const x = hello();
+
+// console.log(x)
+
+// recieve(x)
+
+
+function nobita() {
+  const nobita_value = 'のび太だよ'
+  function suneo() {
+    console.log(nobita_value)
+  }
+  return suneo()
+}
+
+
+nobita();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//main(require("fs").readFileSync("/dev/stdin", "utf8"));
