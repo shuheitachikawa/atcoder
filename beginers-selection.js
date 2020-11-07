@@ -116,7 +116,7 @@
 
 
 //Youtube
-'use strict';
+//'use strict';
 // function hello() {
 //   function child() {
 //     console.log('私はHelloの子供です')
@@ -137,22 +137,40 @@
 // recieve(x)
 
 
-function nobita() {
-  const nobita_value = 'のび太だよ'
-  function suneo() {
-    console.log(nobita_value)
-  }
-  return suneo()
+// function nobita() {
+//   const nobita_value = 'のび太だよ'
+//   function suneo() {
+//     console.log(nobita_value)
+//   }
+//   return suneo()
+// }
+
+
+// nobita();
+
+
+
+
+
+
+// ABC085B - Kagami Mochi 
+const main = (input) => {
+  input = input.split('\n')
+  input.shift()
+  d = input.filter((x,i,self) => {
+    // console.log(x)
+    // console.log(i)
+    // console.log(self)
+    console.log(self.indexOf(x))
+    return self.indexOf(x) === i
+  })
+  //console.log(d.length)
 }
-
-
-nobita();
-
-
-
-
-
-
+main(`4
+10
+8
+8
+6`)
 
 
 
